@@ -4,6 +4,6 @@ $(document).ready(function () {
 });
 
 (function(){
-  var hotelbApp = angular.module('hotelbApp', ['ng-currency', 'ui.bootstrap']);
+  var escapeApp = angular.module('escapeApp', ['ng-currency', 'ui.bootstrap']);
 
 })();
