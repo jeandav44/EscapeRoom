@@ -1,11 +1,15 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html ng-app="hotelbApp" xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html ng-app="escapeRoomApp" xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta author1="Jean Andrade Pazmiño">
+  <meta author2="Aleix Velasco Calvo">
   <title>Escape Room</title>
   <!-- css-->
-  <link rel="shortcut icon" HREF="images/candado.png"/>
+  <link rel="shortcut icon" href="images/key.png"/>
   <link rel="stylesheet" type="text/css" href="vendors/bootstrap/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="css/index.css" />
 
@@ -22,55 +26,58 @@
 
   <!-- Own code-->
   <!-- Model-->
-  <script src="js/model/reservationObj.js" type="text/javascript" xml:space="preserve"></script>
-  <script src="js/model/reviewObj.js" type="text/javascript" xml:space="preserve"></script>
+  <!--script src="js/model/reservationObj.js" type="text/javascript" xml:space="preserve"></script>
+  <script src="js/model/reviewObj.js" type="text/javascript" xml:space="preserve"></script-->
 
   <!-- Controllers-->
   <script src="js/app.js" type="text/javascript" xml:space="preserve"></script>
   <script src="js/controller/generalFunctions.js" type="text/javascript" xml:space="preserve"></script>
-  <!-- <script src="js/controller/hotelReservationController.js" type="text/javascript" xml:space="preserve"></script> -->
-  <script src="js/controller/MainController.js" type="text/javascript" xml:space="preserve"></script>
+  <script src="js/controller/mainController.js" type="text/javascript" xml:space="preserve"></script>
+  <script src="js/controller/signInController.js" type="text/javascript" xml:space="preserve"></script>
+  <script src="js/controller/addGameController.js" type="text/javascript" xml:space="preserve"></script>
+  <script src="js/controller/gameReservationController.js" type="text/javascript" xml:space="preserve"></script>
+  <script src="js/controller/gameReviewController.js" type="text/javascript" xml:space="preserve"></script>
+
 </head>
-<body class="container" ng-controller="MainController as MainCtrl">
-  <div class="imageDiv">
-    <img src="images/room.jpg" id='logo' width="300" height="240" /></br>
-  </div>
-  <!-- <div id="mainMenu" class="container well" ng-controller="hotelReservationController as hotelResCtrl">
-    <h1>Welcome to the best Escape Room!!</h1> -->
-
-
-
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#" onclick="location.reload()">
-          <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-        </a>
-      </div>
-         <ul class="nav navbar-nav">
-            <li><a href="#" ng-click="showAction=1">Reserve</a></li>
-            <li><a href="#" ng-click="showAction=2">Add Game</a></li>
-            <li><a href="#" ng-click="showAction=3">Opinions</a></li>
-         </ul>
-      <button type="button" ng-click="showAction=4" class="btn btn-default navbar-btn ">Register</button>
-
-        </div>
-    </nav>
-    <!-- </div> -->
-
-    <div id="reserve" class="form-horizontal" ng-show="showAction==1">
-      <hotel-reservation-form></hotel-reservation-form>
+<body class="container">
+  <!--div class="container">
+    <img src="images/escape_room.jpg" id='logo' width="300" height="240" /></br>
+  </div-->
+  <br/>
+  <br/>
+  <div id="mainMenu" class="container jumbotron" ng-controller="escapeRoomController as escapeRoomCtrl">
+    <h1>Welcome to the best Escape Room</h1>
+    <div class="collapse navbar-collapse" id="mainOptions">
+     <ul class="nav navbar-nav">
+       <li><a onclick="location.reload()"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+       <li><a href="#" ng-click="showAction=1">Sign in</a></li>
+       <li><a href="#" ng-click="showAction=2">Add games</a></li>
+       <li><a href="#" ng-click="showAction=3">Game reservation</a></li>
+       <li><a href="#" ng-click="showAction=4">Game reviews</a></li>
+     </ul>
+    </div>
+    <div id="signIn" class="form-horizontal" ng-show="showAction==1">
+      <br/>
+      <sign-in-form></sign-in-form>
     </div>
 
-    <div id="reviews" class="form-horizontal" ng-show="showAction==2">
-      <hotel-reviews-form></hotel-reviews-form>
+    <div id="add" class="form-horizontal" ng-show="showAction==2">
+      <br/>
+      <add-game-form></add-game-form>
     </div>
+
+    <div id="reservation" class="form-horizontal" ng-show="showAction==3">
+      <br/>
+      <game-reservation-form></game-reservation-form>
+    </div>
+
+    <div id="reviews" class="form-horizontal" ng-show="showAction==4">
+      <br/>
+      <game-reviews-form></game-reviews-form>
+    </div> 
+  </div>  
+  <div id="foot" class="container jumbotron">
+	  <p class="nav-text">DAW2 M06 Desenvolupament Web en entorn client - Jean Andrade Pazmiño y Aleix Velasco Calvo</p>
   </div>
-  <br/><br/><br/>
-  <!-- <div id="foot" class="container well">
-    <button class="btn btn-primary pull-left" onclick="location.reload()">Reload</button>
-    <strong><span></span>--Reload the page</strong>
-  </div> -->
 </body>
 </html>

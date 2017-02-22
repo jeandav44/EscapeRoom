@@ -4,6 +4,5 @@ $(document).ready(function () {
 });
 
 (function(){
-  var escapeApp = angular.module('escapeApp', ['ng-currency', 'ui.bootstrap']);
-
+  var escapeRoomApp = angular.module('escapeRoomApp', ['ng-currency', 'ui.bootstrap']);
 })();
