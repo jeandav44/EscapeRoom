@@ -3,16 +3,5 @@
 
 
   }]);
-  
-  angular.module('escapeRoomApp').directive("gameReservationForm", function (){
-    return {
-      restrict: 'E',
-      templateUrl:"view/templates/game-reservation-form.html",
-      controller:function(){
-
-      },
-      controllerAs: 'gameReservationForm'
-    };
-  });
 
 })();
