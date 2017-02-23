@@ -38,8 +38,6 @@
   <script src="js/controller/gameReservationController.js" type="text/javascript" xml:space="preserve"></script>
   <script src="js/controller/gameReviewController.js" type="text/javascript" xml:space="preserve"></script>
 
-  <!-- Model -->
-
 </head>
 <body class="container">
   <!--div class="container">
@@ -47,8 +45,8 @@
   </div-->
   <br/>
   <br/>
-  <div id="mainMenu" class="container jumbotron" ng-controller="escapeRoomController as escapeRoomCtrl">
-    <h1>Welcome to the best Escape Room</h1>
+  <div id="mainMenu" class="container jumbotron" ng-controller="mainController as mainRoomCtrl">
+    <h1>Welcome to the best Escape Room!!</h1>
     <div class="collapse navbar-collapse" id="mainOptions">
      <ul class="nav navbar-nav">
        <li><a onclick="location.reload()"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
@@ -58,26 +56,26 @@
        <li><a href="#" ng-click="showAction=4">Game reviews</a></li>
      </ul>
     </div>
-    <div id="signIn" class="form-horizontal" ng-show="showAction==1"
-     ng-controller="singInController as singInCtrl">
+    <div id="signIn" class="form-horizontal" ng-show="$parent.showAction==1"
+       ng-controller="signInController as signInCtrl">
       <br/>
       <sign-in-form></sign-in-form>
     </div>
 
-    <div id="add" class="form-horizontal" ng-show="showAction==2"
+    <div id="add" class="form-horizontal" ng-show="$parent.showAction==2"
       ng-controller="addGameController as addGameCtrl">
       <br/>
       <add-game-form></add-game-form>
     </div>
 
-    <div id="reservation" class="form-horizontal" ng-show="showAction==3"
+    <div id="reservation" class="form-horizontal" ng-show="$parent.showAction==3"
      ng-controller="gameReservationController as gameReservationCtrl">
       <br/>
       <game-reservation-form></game-reservation-form>
     </div>
 
-    <div id="reviews" class="form-horizontal" ng-show="showAction==4"
-     ng-controller="gameReviewController as gameReviewCtrl">
+    <div id="reviews" class="form-horizontal" ng-show="$parent.showAction==4"
+     ng-controller="gameReviewController as gameReviewCtrl"/>
       <br/>
       <game-reviews-form></game-reviews-form>
     </div>
