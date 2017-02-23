@@ -3,5 +3,16 @@
 
 
   }]);
+  
+  angular.module('escapeRoomApp').directive("gameReviewsForm", function (){
+    return {
+      restrict: 'E',
+      templateUrl:"view/templates/game-reviews-form.html",
+      controller:function(){
+
+      },
+      controllerAs: 'gameReviewsForm'
+    };
+  });
 
 })();
