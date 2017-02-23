@@ -12,3 +12,14 @@
 	margin:auto;
 	width:100%;
 }
+
+#mainMenu {
+  background-image: url(../images/escape_room.jpg) !important;
+}
+#mainMenu > h1 {
+  color: #ffffff;
+}
+
+a{
+  color: #ffffff;
+}

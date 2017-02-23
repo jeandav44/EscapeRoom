@@ -1,33 +1,4 @@
-/* @reservationObj()
-* @author: Irene Blanco Fabregat
-* @date: 02/02/2015
-* @description: Object review
-* @Attributes:
-* 		id: id for the reservation
-name: first name for the reservation
-surname: last name for the reservation
-firstAddress;
-secondAddress;
-city;
-state;
-postalCode;
-numOfAdults;
-numOfChildren;
-phone;
-email;
-roomPreference;
-checkInDate;
-checkOutDate;
-checkInTime;
-checkOutTime;
-specialInstructions;
-totalPrice;
-* @methods:
-* 		construct
-* 		set's and get's foor each attribute
-* 		toString(): transforms an object to well formated string with the attributes
-*
-*/
+
 
 function reservationObj ()
 {
