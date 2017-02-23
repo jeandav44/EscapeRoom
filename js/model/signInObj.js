@@ -1,4 +1,4 @@
-function signInObj () {
+function signInObj() {
 
   //Attributes declaration
   this.username;
